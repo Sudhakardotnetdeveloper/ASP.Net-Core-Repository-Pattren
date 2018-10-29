@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<h2>AddCategory</h2>
+<form method="post">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2">Code</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="code" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Name</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">
+
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+        
+    </div>
+</form>
+
+@if (TempData["Information"] != null)
+{
+<div class="alert alert-info">
+    @TempData["Information"].ToString()
+</div>
+}
+
